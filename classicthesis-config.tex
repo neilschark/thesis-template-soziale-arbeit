@@ -274,9 +274,11 @@
 % ********************************************************************
 % Changing the text area
 % ********************************************************************
-%\areaset[current]{312pt}{761pt} % 686 (factor 2.2) + 33 head + 42 head \the\footskip
-%\setlength{\marginparwidth}{7em}%
-%\setlength{\marginparsep}{2em}%
+\newlength{\mytextwidth}
+\newlength{\mytextheight}
+\setlength{\mytextwidth}{\dimexpr\paperwidth-113.811pt-56.906pt\relax}
+\setlength{\mytextheight}{\dimexpr\paperheight-71.132pt-56.906pt\relax}
+\areaset[current]{\mytextwidth}{\mytextheight}
 
 % ********************************************************************
 % Using different fonts
