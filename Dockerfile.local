@@ -1,6 +1,6 @@
 FROM debian:12
 
-LABEL maintainer="neilscharl https://github.com/neilschark"
+LABEL maintainer="neilschark https://github.com/neilschark"
 
 # Set the frontend to noninteractive to configure the time zone
 ARG DEBIAN_FRONTEND=noninteractive
