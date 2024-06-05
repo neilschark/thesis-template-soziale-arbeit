@@ -34,3 +34,9 @@ bz2-small: clean
 	@echo 'creating package excluding Docs'
 	@tar --exclude-vcs --exclude=Docs -cf `pwd`/../${MASTER}-${NAME}_${SURNAME}-${VERSION}-`date +%Y%m%d`_small.tar `pwd`/../`pwd | sed "s,^\(.*/\)\?\([^/]*\),\2,"`
 	@bzip2 `pwd`/../${MASTER}-${NAME}_${SURNAME}-${VERSION}-`date +%Y%m%d`_small.tar
+
+build-docker:
+	docker build --tag latex .
+
+run-docker: build-docker
+	docker run --volume $(CURDIR):/thesis-template/ latex

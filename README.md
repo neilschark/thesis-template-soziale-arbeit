@@ -173,47 +173,45 @@ However, if you prefer to uses the old IEEE Numeric style for citations you can 
 
 ### Compiling the LaTeX source code
 
-You may compile the hda-thesis template using the ```pdflatex``` and the ```bibtex``` command. In addition, the thesis template repository contains a Makefile that allows you to compile the thesis template using the _make_ tool available on most Unix and Linux systems. Simply type:
+You may compile the hda-thesis template using the ```pdflatex``` and the ```biber``` command. In addition, the thesis template repository contains a Makefile that allows you to compile the thesis template using the _make_ tool available on most Unix and Linux systems. Simply type:
 
 ```
- $ make
+make
 ```
 
 to compile the LaTeX code into a PDF-file. Moreover, you may use
 
 ```
- $ make clean
+make clean
 ```
 
 to remove all temporary files, which are produced during the compilation process. Finally,
 
 ```
- $ make bz2
+make bz2
 ```
 
 generates a bz2-package file, which contains all the source files of your LaTeX code. In case you need to create a PDF-version with embedded fonts you may use
 
 ```
- $ make publish
+make publish
 ```
 
 ### Using Docker
 
-The h_da thesis template ships with two Dockerfiles that create [Docker](https://www.docker.com) container used to compile the LaTeX code. One container - built by the [Dockerfile.ci]( https://github.com/mbredel/thesis-template/blob/master/Dockerfile.ci) Docker file - is used by the CI to compile the thesis template and check its integrity at every commit. The other one - created by the [Dockerfile.local](https://github.com/mbredel/thesis-template/blob/master/Dockerfile.local) Docker file - might be used to build the Docker container that allows to compile the LaTeX code on your local machine without the need to install any LaTeX files.
-
 In order to build the Docker image you have to type the following command:
 
-```
- $ docker build --tag mbredel/thesis-template --file Dockerfile.local .
+```sh
+make build-docker
 ```
 
 Creating the image requires a working (and hopefully fast) Internet connection. It may take several minutes to download the required base-images as well as all needed dependencies. You only have to create the image once. Once the image is created, you can run the Docker container by running the following command
 
+```sh
+make run-docker
 ```
- $ docker run --volume "$(pwd)":/thesis-template/ mbredel/thesis-template && docker rm $(docker ps -lq)
- ```
 
-inside the root directory containing the LaTeX code. The command mounts the current directory into the Docker container, runs the "publish" make target, and thus compiles the LaTeX code into a PDF file. Finally, the command removes the container again, as it is not needed anymore. You may re-compile the LaTeX code by re-running the "docker run ..." command again.
+inside the root directory containing the LaTeX code. The command mounts the current directory into the Docker container, runs the "all" make target, and thus compiles the LaTeX code into a PDF file. Finally, the command removes the container again, as it is not needed anymore. You may re-compile the LaTeX code by re-running the "make run-docker." command again.
 
 For more information on Docker, please take a look at the [Docker documentation](https://docs.docker.com/).
 
