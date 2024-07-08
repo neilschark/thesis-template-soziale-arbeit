@@ -2,7 +2,7 @@
 
 # A thesis LaTeX-template
 
-This LaTeX-template might be used to write a bachelor or master thesis at the social works department at [h_da University of Applied Sciences](https://www.fbi.h-da.de/fbi.html "Hochschule Darmstadt, University of Applied Sciences") in Darmstadt. It is based on the template from the [computer science department](https://github.com/mbredel/thesis-template). It is adapted to the current style guide for bachelor and master theses in the social works department of h_da, as outlined in [Hinweise Hausarbeit](https://sozarb.h-da.de/fileadmin/documents/Fachbereiche/Soziale_Arbeit/Downloads/Hausarbeit/Hinweise_Hausarbeit_Oktober_2017.pdf)
+This LaTeX-template might be used to write a bachelor or master thesis at the social works department at [h_da University of Applied Sciences](https://sozarb.h-da.de/ "Hochschule Darmstadt, University of Applied Sciences") in Darmstadt. It is based on the template from the [computer science department](https://github.com/mbredel/thesis-template). It is adapted to the current style guide for bachelor and master theses in the social works department of h_da, as outlined in [Hinweise Hausarbeit](https://sozarb.h-da.de/fileadmin/documents/Fachbereiche/Soziale_Arbeit/Downloads/Hausarbeit/Hinweise_Hausarbeit_Oktober_2017.pdf)
 
 ## Table of contents
 
