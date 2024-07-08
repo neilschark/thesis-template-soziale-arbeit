@@ -95,8 +95,8 @@ This is where you have to place all the personal stuff of your thesis, starting 
 \newcommand{\myDegree}{Bachelor of Science (B.Sc)\xspace}
 \newcommand{\myName}{Andr\'e Miede\xspace}
 \newcommand{\myId}{Matrikelnummer\xspace}
-\newcommand{\myProf}{Prof. Dr.-Ing. Michael Bredel\xspace}
-\newcommand{\myOtherProf}{Prof. Dr. Martin Stiemerling\xspace}
+\newcommand{\myProf}{Prof. Dr. Referent.\xspace}
+\newcommand{\myOtherProf}{Prof. Dr. Koreferent\xspace}
 \newcommand{\myFaculty}{Fachbereich Informatik\xspace}
 \newcommand{\myUni}{Hochschule Darmstadt\xspace}
 \newcommand{\myLocation}{Darmstadt\xspace}
